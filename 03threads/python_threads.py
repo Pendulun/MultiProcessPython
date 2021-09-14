@@ -15,6 +15,8 @@ def main():
     FINAL = 50_000_000
 
     #Distribuindo o range de execução para cada Thread
+    #Apesar de criarmos uma Thread para cada core, ainda não estamos usando paralelismo,
+    #Apenas multiThreading
     for core_id in range(1, qtd_cores+1):
         ini = FINAL * (core_id - 1)/qtd_cores
         fim = FINAL * core_id / qtd_cores
