@@ -2,7 +2,9 @@ import multiprocessing
 
 
 def calcular(dado):
-    return dado ** 2
+    result = dado ** 2 
+    print(f'O processo com nome: {multiprocessing.current_process().name} gerou {result}')
+    return result
 
 def imprimir_nome_processo():
     print(f'Iniciando o processo com nome: {multiprocessing.current_process().name}')
